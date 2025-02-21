@@ -199,7 +199,7 @@ Unless enabled (or the user is the admin), users who merge their TGT to TITN sho
 
 ## All trusted roles in the protocol
 
-N/A
+The owner
 
 
 ## Describe any novel or unique curve logic or mathematical models implemented in the contracts:
