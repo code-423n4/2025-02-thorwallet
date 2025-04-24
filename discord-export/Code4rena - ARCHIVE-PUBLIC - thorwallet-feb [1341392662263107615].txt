@@ -1,0 +1,1932 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-PUBLIC / thorwallet-feb
+==============================================================
+
+[02/19/2025 17:22] kartoonjoy (pinned)
+👋 Hello and welcome to the **$18,000 in USDC THORWallet** audit channel!
+
+📆 Audit opens 02/20/2025 20:00 (20:00 UTC) and runs through 02/26/2025 20:00 (20:00 UTC) (6 days).
+
+Please give a warm welcome to the THORWallet team, particularly @Matt and @cryptoxz (Thorwallet), who will be available for questions either here in the channel or via a PRIVATE thread in the CET timezone(s). 
+
+🤖 **Documentation bot assistance:** For general questions about the codebase, give our documentation bot a try, by tagging `@Docs Wolf` in any thread (private or public) and asking your question, once the audit is live. The bot will make its best attempt to answer based on the codebase and documentation, and link you to relevant resources. *Docs Wolf will be available when the audit is live.*
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: <https://code4rena.com/audits/2025-02-thorwallet>
+
+{Reactions}
+🔥 (11) 
+
+[02/19/2025 17:23] kartoonjoy (pinned)
+🔥 This is a great opportunity for wardens with LayerZero experience! 🔥
+
+{Reactions}
+🔥 (11) 
+
+[02/20/2025 08:24] cryptoxz
+Hello all 👋
+
+{Reactions}
+👋 (32) 
+
+[02/20/2025 20:10] cryptoxz
+Happy to answer any questions. Thank you for participating
+
+{Reactions}
+👍 (11) 🫶 
+
+[02/20/2025 22:12] cd_pandora
+@cryptoxz (Thorwallet) the bridging and withdrawal of TITN. Is this a one time event? Or will this be continously held
+
+
+[02/20/2025 22:16] cd_pandora
+@Matt
+
+
+[02/20/2025 22:37] cacaomatt
+It's intended to be a 1 time event for users. Although they can also do it several times. The goal is that within the 1 year period where the contract will allow merging most TGT holders will go through this process.
+
+
+[02/21/2025 07:28] chalabiu
+Hey!
+on the image - it is supposed to be npm install no?
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/image-08E30.png
+
+
+[02/21/2025 07:32] 0x1422
+Use this command `npm install -g pnpm@latest-10` to install pnpm
+
+{Reactions}
+👍 
+
+[02/21/2025 07:33] chalabiu
+ahh got it, thanks
+
+{Reactions}
+👍 
+
+[02/21/2025 13:15] ochuko_wh.
+Please is there a pool allocation for low findings?
+
+
+[02/21/2025 13:19] kartoonjoy
+Hi there! That's a c4 question, not a sponsor question. Would you mind removing the tag, please?
+
+I'm linking the RSVP which has the pool breakdown. 
+
+https://discord.com/channels/810916927919620096/958800160870240286/1341797619281694731
+
+<https://docs.code4rena.com/awarding/incentive-model-and-awards#qa-and-gas-optimization-reports>
+
+
+[02/21/2025 13:29] no.one7777
+@Matt @cryptoxz (Thorwallet)  does the owner is trusted
+
+
+[02/21/2025 13:31] cryptoxz
+Owner of merge contract and deployed of both token is us. Not sure what do you mean here
+
+
+[02/21/2025 13:32] no.one7777
+`onlyOwner`
+
+
+[02/21/2025 13:33] cryptoxz
+I don’t get what you mean by trusted
+
+
+[02/21/2025 13:34] __serverless
+Since they are the owners, yes, it should be trusted.
+
+{Reactions}
+👍 
+
+[02/21/2025 14:22] 0x46_dustin
+All trusted roles in the protocol
+N/A
+
+
+[02/21/2025 14:22] 0x46_dustin
+what does this mean?
+
+
+[02/21/2025 14:23] cacaomatt (pinned)
+There is one trusted role and it’s the owner (deployer)
+
+
+[02/21/2025 14:27] 0x46_dustin
+but that's not in the readme.
+
+
+[02/21/2025 14:29] 0x46_dustin
+wanna explain about it, @kartoonjoy | C4🎇🎇
+
+
+[02/21/2025 14:44] kartoonjoy
+is the ask here that the trusted role be designated as the owner in the README?
+
+
+[02/21/2025 14:45] 0x46_dustin
+trusted role is N/A in the readme.
+
+
+[02/21/2025 14:46] msk0333
+i think that is mistake. the owner should be trusted
+
+
+[02/21/2025 14:47] unpluggedtj
+I mean yeah, it's missing in readme but my conscience says it should be trusted.
+
+{Reactions}
+👍 (4) 
+
+[02/21/2025 15:13] kartoonjoy
+Pinned a message.
+
+
+[02/21/2025 15:32] kartoonjoy
+The owner has been added to the trusted roles in the readme. Thanks all
+
+{Reactions}
+👍 (7) 
+
+[02/21/2025 16:07] unpluggedtj
+Solid codebase ngl
+
+{Reactions}
+👍 (7) 💯 (2) 
+
+[02/21/2025 16:30] mauro2857
+who is the address `_delegate` in the constructor of the `Titn` contract?
+
+
+[02/21/2025 16:31] benterkiii
+owner
+
+
+[02/21/2025 16:57] unpluggedtj
+I think we can assume them to be the owner as the minter is trusted anyways.
+
+{Reactions}
+👍 
+
+[02/21/2025 17:08] mauro2857
+Why is the `_srcEid` commented out in the `_credit` function of the Titn contract?
+
+
+[02/21/2025 17:57] 0x0107
+Titn contract is already deployed on base network
+
+
+[02/21/2025 17:59] 0x0107
+they have a plan redeploy this contract?
+
+
+[02/21/2025 18:01] 0x46_dustin
+what? address?
+
+
+[02/21/2025 18:02] 0x0107
+https://arbiscan.io/address/0x429fed88f10285e61b12bdf00848315fbdfcc341#code
+
+
+[02/21/2025 18:02] 0x0107
+https://code4rena.com/audits/2025-02-thorwallet#toc-3-production
+
+
+[02/21/2025 18:02] 0x0107
+check this
+
+
+[02/21/2025 18:02] 0x0107
+all contracts are deployed on mainnet
+
+
+[02/21/2025 18:10] 0x0107
+am I wrong?
+
+
+[02/21/2025 18:47] samuselderg
+I dont have full context, but skimming the audit repo seems the audit is for the bridge between tokens, so i would expect TGT at least to already exist on mainnet
+
+
+[02/21/2025 18:53] cacaomatt
+These are all test deployments.
+The only contract that already exists (for several years now) is TGT
+
+
+[02/21/2025 18:54] cacaomatt
+The audit is for the TITN contracts (including the bridge mechanism) and the Merge contract
+
+{Reactions}
+👍 (5) 
+
+[02/22/2025 07:37] 4b69
+@cryptoxz (Thorwallet)  @Matt  how many times can `MergeTgt:: deposit` be called?
+
+{Reactions}
+1️⃣ 
+
+[02/22/2025 07:40] cacaomatt
+As many times as a user want. Every time this happens the user must have some TGT to deposit
+
+{Reactions}
+🧐 
+
+[02/22/2025 07:41] 4b69
+This is the owner function rather
+
+
+[02/22/2025 07:42] 4b69
+The first function in the contract
+
+
+[02/22/2025 07:54] cacaomatt
+ah sorry yes, this will only be called once
+
+{Reactions}
+👍 (2) 
+
+[02/22/2025 09:10] ochuko_wh.
+@cryptoxz (Thorwallet) 
+
+I'm having issues creating a mock with the Titn
+Can you help?
+
+
+[02/22/2025 09:23] ochuko_wh.
+Please has anyone been able to deploy the Titn contract?
+
+I'm running into some issues here
+
+
+[02/22/2025 09:43] cacaomatt
+Did you try `npx hardhat lz:deploy` > select both base and arbitrum > then type `Titn`
+
+
+[02/22/2025 10:10] ochuko_wh.
+Okay, but is it possible to do the foundry method?
+
+
+[02/22/2025 10:12] cacaomatt
+that's out of scope in this codebase
+
+
+[02/22/2025 10:12] ochuko_wh.
+Oh, okay
+
+
+[02/22/2025 10:19] dot_cloud
+bro, you should integrate foundry yourself
+https://book.getfoundry.sh/config/hardhat
+
+{Embed}
+https://book.getfoundry.sh/config/hardhat
+Foundry Book
+A book on all things Foundry
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/card-E9D38.png
+
+
+[02/22/2025 10:20] ochuko_wh.
+Yeah, I've done that already 
+
+I'm just having errors trying to deploy a mock with the Titn contract
+
+{Reactions}
+👍 
+
+[02/22/2025 10:24] dot_cloud
+what is the log say
+
+
+[02/22/2025 10:24] ochuko_wh.
+It's in the setup
+
+I'll share a screenshot
+
+
+[02/22/2025 10:34] ochuko_wh.
+Here is a screenshot
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/Screenshot_2025-02-22_at_11.32.41_AM-04168.png
+
+
+[02/22/2025 10:39] dot_cloud
+its the lzEndpoint should be lzEndpoint contract
+
+
+[02/22/2025 10:42] dot_cloud
+try using fork test and provide lzEndpoint with an actual address
+
+
+[02/22/2025 10:45] ochuko_wh.
+Okay, where do you get the lzEndpoint from please?
+
+
+[02/22/2025 10:52] ochuko_wh.
+It worked now, thanks alot man
+
+{Reactions}
+👍 
+
+[02/22/2025 18:04] cd_pandora
+Alright, in the next round will the contract  be redeployed?
+
+
+[02/22/2025 18:39] cacaomatt
+Yes, If no issues found, all 3 contracts will be redeployed
+
+
+[02/22/2025 23:01] silver__eth
+any idea where to see the staking contract?
+
+
+[02/22/2025 23:05] silver__eth
+i assume its the merge contract but users have no use sending titn tokens there
+
+
+[02/23/2025 03:12] george786.
+@Matt When I'm running that
+
+```
+
+
+allen@LN08:~/audits/2025-02-thorwallet$ npx hardhat lz::deploy 
+Error HH303: Unrecognized task 'lz::deploy'
+
+For more info go to https://hardhat.org/HH303 or run Hardhat with --show-stack-traces
+(node:6623) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+allen@LN08:~/audits/2025-02-thorwallet$ npx hardhat lz::deploy 
+Error HH303: Unrecognized task 'lz::deploy'
+
+For more info go to https://hardhat.org/HH303 or run Hardhat with --show-stack-traces
+(node:6876) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+allen@LN08:~/audits/2025-02-thorwallet$ 
+````
+
+
+[02/23/2025 07:50] cacaomatt
+You are probably missing some dependencies
+
+
+[02/23/2025 08:16] ochuko_wh.
+Hey, everyone
+
+Please I wanted to clarify about reporting 
+
+If I find multiple issues in one function, do I report them separately or together
+
+I'm not really clear about the reporting
+
+
+[02/23/2025 08:58] alekso1
+One rootcause one issue
+
+
+[02/23/2025 10:37] ochuko_wh.
+Okay, thank you
+
+
+[02/23/2025 12:28] rfa1741
+What's gonna be Titn::transferAllowedContract value? Is it intended to be the MergeTgt address? @cryptoxz (Thorwallet) (Thorwallet)  @Matt
+
+{Reactions}
+✅ 
+
+[02/23/2025 12:57] ivanfitro
+i think this is correct
+
+
+[02/23/2025 12:57] rfa1741
+@Fitro okay thanks
+
+{Reactions}
+👍 
+
+[02/23/2025 15:23] halalauditor
+Is it me or this codebase is sooo soooooolid?
+
+{Reactions}
+👍 (4) 👀 
+
+[02/23/2025 15:27] unpluggedtj
+Nah, it is indeed solid, I haven’t found anything🥲
+
+
+[02/23/2025 15:39] halalauditor
+Am wondering , its eating me alive
+I think whoever finds something good here will take the whole pot
+
+
+[02/23/2025 15:52] dot_cloud
+its either me or the code that breaks
+
+{Reactions}
+😂 (6) 
+
+[02/23/2025 16:00] chalabiu
+i bet when the audit ends, there will 1000+ submissions
+
+{Reactions}
+🔥 (3) 😂 (10) 
+
+[02/23/2025 16:15] benterkiii
+It is very solid, the developer has done a great work 🔥
+
+{Reactions}
+👍 (8) 👀 
+
+[02/23/2025 17:39] willycode20
+I'm with you on this
+
+
+[02/24/2025 18:16] _bzee.
+I disagree
+
+
+[02/24/2025 18:16] _bzee.
+Maybe we're looking at different codebase
+
+{Reactions}
+😂 (6) 
+
+[02/24/2025 18:29] mauro2857
+Will PoC be desconsidered if it's written using foundry?
+
+
+[02/24/2025 18:31] granat__
+i don’t think, adding a proper setUp() function it should be considered.
+
+
+[02/24/2025 21:32] secret__one_46426
+Owner will deploy contracts, right?? @Matt @cryptoxz (Thorwallet)
+
+
+[02/24/2025 21:33] cacaomatt
+Yes
+
+{Reactions}
+👍 
+
+[02/25/2025 07:43] pabloperezacc_50779
+if there is no bug in the code, then how are the rewards distributed to auditors?
+
+{Reactions}
+😂 (2) 
+
+[02/25/2025 08:31] 0xjarix
+PoC is required?
+
+
+[02/25/2025 08:36] _bzee.
+Recommended
+
+
+[02/25/2025 08:41] uaarrr
+100%
+
+
+[02/25/2025 09:38] pcprodigy
+Don't bother, there isn't a code in the bug
+
+
+[02/25/2025 09:59] 0xjarix
+either there isn't a bug in the code or there isn't a code without bug
+
+{Reactions}
+😂 (6) 
+
+[02/25/2025 09:59] 0xjarix
+can't mix both 😂
+
+
+[02/25/2025 12:21] cd_pandora
+😔😔
+
+
+[02/25/2025 13:37] benterkiii
+I am falling in love with this codebase :chefskiss:
+
+{Reactions}
+😂 (4) 💜 (2) 
+
+[02/25/2025 14:29] demorextess
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/image-09FE6.png
+
+{Reactions}
+😂 (22) 
+
+[02/25/2025 14:35] secret__one_46426
+We can edit the report after the submission (before deadline), right??
+
+{Reactions}
+👍 (4) 
+
+[02/25/2025 14:46] 4b69
+Bro just found out his low was a high 😹🔥
+
+{Reactions}
+😂 (15) 
+
+[02/25/2025 14:57] secret__one_46426
+Dreaming...
+
+
+[02/26/2025 11:01] _bzee.
+Ikr
+
+
+[02/26/2025 11:29] elser17
+transferAllowedContract in TITN.sol is the MergeTgt.sol contract, am I correct?
+
+{Reactions}
+👍 
+
+[02/26/2025 11:44] insurgence_
+yes
+
+{Reactions}
+❤️ 
+
+[02/26/2025 12:46] 0xhelium
+Bro found the only HM
+
+{Reactions}
+😂 
+
+[02/26/2025 12:54] benterkiii
+demonstrating one impact of a bug is enough for the submission to be valid ?
+
+
+[02/26/2025 12:55] benterkiii
+as long as the root cause is right?
+
+{Reactions}
+👍 
+
+[02/26/2025 17:43] _pluto_in
+@Matt @cryptoxz (Thorwallet) Are dms allowed to ask privately ?
+
+
+[02/26/2025 17:43] cacaomatt
+Better use a private thread
+
+{Reactions}
+💯 
+
+[02/26/2025 17:49] _pluto_in
+@Matt created one
+
+
+[02/26/2025 18:34] _pluto_in
+https://tenor.com/view/angry-annoyed-squidward-spongebob-freak-out-gif-18780512
+
+{Embed}
+https://tenor.com/view/angry-annoyed-squidward-spongebob-freak-out-gif-18780512
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/angry-annoyed-2B124.png
+
+
+[02/26/2025 18:35] _pluto_in
+where are these bugs ?
+
+
+[02/26/2025 18:37] _heeze
+https://tenor.com/view/youre-running-out-of-time-chen-biao-bowen-yang-saturday-night-live-snl-gif-18789628
+
+{Embed}
+https://tenor.com/view/youre-running-out-of-time-chen-biao-bowen-yang-saturday-night-live-snl-gif-18789628
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/youre-running-out-of-time-chen-biao-4CE37.png
+
+
+[02/26/2025 18:37] benterkiii
+https://tenor.com/view/dora-dora-the-explorer-boots-boots-the-monkey-dance-gif-10848279647899354337
+
+{Embed}
+https://tenor.com/view/dora-dora-the-explorer-boots-boots-the-monkey-dance-gif-10848279647899354337
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/dora-dora-the-explorer-8901F.png
+
+{Reactions}
+😂 (4) 
+
+[02/26/2025 18:38] devanas17
+and we will suddenly see more than 500 submission.
+
+
+[02/26/2025 18:39] benterkiii
+i bet more than 1k subs
+
+
+[02/26/2025 18:40] devanas17
+where are they come from?
+
+
+[02/26/2025 18:40] sentient_stick
+500 participants and 2 informational bugs
+
+{Reactions}
+😂 (4) 
+
+[02/26/2025 18:41] _pluto_in
+https://tenor.com/view/albert-ai-fall-hit-cube-gif-12931525125713205932
+
+{Embed}
+https://tenor.com/view/albert-ai-fall-hit-cube-gif-12931525125713205932
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/albert-ai-ADB52.png
+
+
+[02/26/2025 18:42] benterkiii
+i wish i had the SR role to see the judging process
+
+
+[02/26/2025 18:43] devanas17
+bro @Slappy_TD , looks exhausted
+
+
+[02/26/2025 18:44] benterkiii
+protocol lack a mechanism to allow users borrow SR role from other users
+
+
+[02/26/2025 18:50] _pluto_in
+This is  my first contest..I must earn atleast $3000
+
+
+[02/26/2025 19:08] benterkiii
+the whole pot is 18k bruh
+
+{Reactions}
+😂 (6) 
+
+[02/26/2025 19:08] 0xhelium
+This usually happens because non SR leaks some hints here while discussing so FOMO makes more peoples submit AI garbage ( this is more noticeable on Codehawks) .
+
+
+[02/26/2025 19:08] benterkiii
+leave some for us 😂
+
+
+[02/26/2025 19:08] 0xhelium
+Bro wants 3k from it . That’s his tweet
+
+{Reactions}
+😂 
+
+[02/26/2025 19:10] _pluto_in
+this post = looks exhausted => lhs =rhs
+
+
+[02/26/2025 19:14] elser17
+transferAllowedContract address in ARB is the MergeTgt contract, but in Base?
+
+
+[02/26/2025 19:15] cacaomatt
+Staking contract (not yet deployed and out of scope though)
+
+
+[02/26/2025 19:16] elser17
+Perfect, thanks for the quick answer
+
+
+[02/26/2025 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺Wardens The **THORWallet** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks.
+
+
+[02/26/2025 20:03] 0xrochimaru
+799 submissions
+
+{Reactions}
+😂 (4) 
+
+[02/26/2025 20:06] _pluto_in
+How do you know ?
+
+
+[02/26/2025 20:09] 0xastronatey
+now you will be banned
+
+
+[02/26/2025 20:11] ykuio
+How much time does this stage normally take?
+
+
+[02/26/2025 20:12] glightspeed
+https://docs.code4rena.com/other-details/our-process
+
+{Embed}
+https://docs.code4rena.com/other-details/our-process
+Audit timeline | Code4rena
+This is a high level overview of the C4 audit timeline.
+
+{Reactions}
+❤️ 
+
+[02/26/2025 20:30] alekso1
+It's sooo competitive, crazy
+
+{Reactions}
+🔥 (2) 
+
+[02/26/2025 20:30] unpluggedtj
+Are you gonna join me for my third consecutive 0.03$ payout on this one?
+
+{Reactions}
+😂 
+
+[02/26/2025 20:37] alekso1
+Ah 😂  thanks I though it was serious lol
+
+
+[02/26/2025 20:37] kmm77
+🥹
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/image-5DC0A.png
+
+{Reactions}
+😭 (5) 
+
+[02/26/2025 20:38] 0xastronatey
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/IMG_5909-55C6C.jpg
+
+
+[02/26/2025 20:55] cd_pandora
+is it possible to read this submissions?
+
+
+[02/26/2025 20:59] sentient_stick
+Well... it's not 1k at least 🤷‍♂️
+
+
+[02/26/2025 21:16] 0xrochimaru
+The SRs are not supposed to discuss issues here. So, it's best to grind and get a SR role yourself I guess 💪
+
+{Reactions}
+thankyou (2) 
+
+[02/27/2025 18:55] horus1_007
+I was thinking 799 submission is too much but there is 1250 warden in this group if only 160 of us report 5 submission it will be the 800 submission but the pot prize of 18,000 is too low
+
+
+[02/27/2025 18:58] horus1_007
+how much time it will take 2 weeks or 3 weeks or 1 month what is the typical range time??
+
+
+[02/27/2025 19:24] ykuio
+There were 5?
+
+
+[02/27/2025 21:25] horus1_007
+the judges of this contract is the best people in the web3 security
+
+
+[02/27/2025 21:25] horus1_007
+they are legends of the space of web3
+
+
+[02/27/2025 21:27] halalauditor
+799?? You gotta be kidding me, spent the whole duration of it, didn't saw of a bug-like in the code base and y'll be submitting 799???
+
+
+[02/27/2025 21:28] horus1_007
+it's fucking crazy if there is 5 or 10 bugs of this contract it's super clean and security of it it's really solid
+
+
+[02/27/2025 22:46] benterkiii
+there is always a bug in the codebase
+
+
+[02/28/2025 02:39] dot_cloud
+https://tenor.com/view/no-war-in-ba-sing-se-avatar-earth-village-gif-25923233
+
+{Embed}
+https://tenor.com/view/no-war-in-ba-sing-se-avatar-earth-village-gif-25923233
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/no-war-in-ba-sing-se-avatar-1E066.png
+
+{Reactions}
+❔ (2) 😂 
+
+[02/28/2025 15:18] mylifechangefast.eth_70767
+Fire Lord ozai
+
+{Reactions}
+😂 (2) 
+
+[02/28/2025 20:11] horus1_007
+is the judges of this group is the same judges of the contract who reviewing tge submission??
+
+
+[02/28/2025 20:12] horus1_007
+is these people the judges who reviewing the submissions??
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/Screenshot_2025-02-28-22-11-39-30_572064f7-9FA9A.jpg
+
+
+[02/28/2025 20:27] thebrittfactor
+There is only one judge per audit, which is assigned by C4 staff.
+
+
+[02/28/2025 20:28] horus1_007
+only one judge reviewing 799 submission wow thank you for answering
+
+
+[02/28/2025 20:38] mauro2857
+Patience
+
+{Reactions}
+💯 (3) 👆 
+
+[02/28/2025 20:53] dot_cloud
+thanks for the reminder, mauro the plmiber
+
+{Reactions}
+🙃 😂 
+
+[03/01/2025 20:19] w33ked_
+https://tenor.com/view/mr-bean-mrbean-bean-mr-bean-holiday-mr-bean-holiday-movie-gif-3228235746377647455
+
+{Embed}
+https://tenor.com/view/mr-bean-mrbean-bean-mr-bean-holiday-mr-bean-holiday-movie-gif-3228235746377647455
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/mr-bean-mrbean-9624D.png
+
+{Reactions}
+😂 (2) 
+
+[03/03/2025 08:45] aarif02
+
+
+{Stickers}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/813950661292064808-435A9.png
+
+
+[03/03/2025 08:46] aarif02
+Wait what? Something that's not even 2 weeks and you started waiting. Hmm 🤔 I guess you're Eager to get to tomorrow huh!
+
+
+[03/03/2025 08:59] w33ked_
+Please don't cry over  it
+
+{Reactions}
+😂 
+
+[03/03/2025 22:26] benterkiii
+Sponsor Review means the judging period has ended ??
+
+
+[03/03/2025 22:52] darklordofthefallennight
+yep
+
+
+[03/04/2025 00:45] demorextess
+No it means validators separated issues based on quality and possible duplicates. Now, it turns for sponsor. He confirms/disputes to issues with his arguments. Later, judge will make the final decision.
+
+{Reactions}
+❤️ 
+
+[03/04/2025 00:46] demorextess
+So, we can say judging is not even started
+
+{Reactions}
+😂 
+
+[03/04/2025 00:55] benterkiii
+thank's bro
+
+{Reactions}
+👍 
+
+[03/04/2025 00:55] demorextess
+Your welcome
+
+{Reactions}
+👍 
+
+[03/04/2025 01:28] ykuio
+Can any SR tell us how many H/M where reported?
+
+
+[03/04/2025 06:39] 0x1422
+feeling same 🥲
+
+
+[03/05/2025 11:49] caesar581
+Fair enough explanation
+
+
+[03/06/2025 13:16] undefined_joe
+Judging Phase.
+This one is going quickly
+
+{Reactions}
+🔥 (11) 
+
+[03/09/2025 19:04] willycode20
+Progress??
+
+
+[03/10/2025 01:03] benterkiii
+https://tenor.com/view/vae-gif-15357506855217945854
+
+{Embed}
+https://tenor.com/view/vae-gif-15357506855217945854
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/vae-07F65.png
+
+
+[03/10/2025 15:06] sherlockvarm
+Any update?
+
+
+[03/10/2025 19:18] horus1_007
+anything??
+
+{Reactions}
+🤔 (5) 
+
+[03/12/2025 15:58] horus1_007
+it's been a week since this one going quickly 
+no updates??
+
+{Reactions}
+🧐 
+
+[03/12/2025 17:12] sherlockvarm
+what happen in PJQA?
+
+
+[03/12/2025 18:14] mrmorningstar96
+Time period where security researchers can escalate their findings if they think judgement decision from judge is wrong
+
+
+[03/12/2025 18:59] undefined_joe
+told u, this one is going quickly
+
+{Reactions}
+😆 (2) 
+
+[03/12/2025 19:01] c_moose
+*senior security researchers
+
+
+[03/12/2025 19:12] horus1_007
+where is even the judgment decision??
+
+
+[03/12/2025 19:12] horus1_007
+super quickly it seems to be
+
+
+[03/12/2025 19:17] mrmorningstar96
+you need backstage role to see that
+
+
+[03/12/2025 20:42] bichistriver
+how to get backstage role?
+
+
+[03/12/2025 20:47] horus1_007
+win contest
+
+{Reactions}
+🫡 (3) 
+
+[03/13/2025 00:03] glightspeed
+now it's PJQA
+
+
+[03/13/2025 00:14] benterkiii
+yep
+
+
+[03/13/2025 03:13] benterkiii
+in the mitigation review, will the judge select few wardens or it will go to the top-rated for this contest??
+
+
+[03/13/2025 11:30] _bzee.
+!wen
+
+
+[03/13/2025 17:49] horus1_007
+can you gave us any update about the contest results 
+when will came out??
+
+{Reactions}
+🤔 
+
+[03/13/2025 18:13] aarif02
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/kira-kiraoninj-8B6C3.mp4
+
+{Reactions}
+😂 (5) 
+
+[03/13/2025 18:20] dot_cloud
+this is not hawk ser 😂
+
+{Reactions}
+😂 😃 
+
+[03/13/2025 19:33] ochuko_wh.
+Hey guys, does PJQA mean they've finished judging?
+
+
+[03/13/2025 23:55] h4ckc4t
+how can participate in the PJQA?
+
+
+[03/14/2025 03:13] horus1_007
+win a contest or multiple win with top 5 of contest and you will be able to participate, I guess
+
+
+[03/14/2025 08:10] 0xhelium
+Not enough
+
+
+[03/14/2025 08:11] 0xhelium
+You can win 100 contest but your signal Will still be low
+
+
+[03/14/2025 08:11] 0xhelium
+So no backstage for you
+
+
+[03/14/2025 08:11] 0xhelium
+Shame on you for taking it from me C4
+
+{Reactions}
+empathy (2) 😭 (2) 
+
+[03/14/2025 09:50] cloudellie
+https://discord.com/channels/810916927919620096/810929015509483554/1350043003414118421
+
+
+[03/14/2025 09:53] infectedfuture
+basically you need:
+- signal >50%
+- signal = valid / invalid (all submitted findings)
+- signal is computed once you participated in at least 3 audits and submitted 5 findings
+So the strategy is at first to only submit issues you're sure about.
+To increase your certainty you can do a PoC, and ensure you correctly assessed the severity (impact/likelihood, see here https://docs.code4rena.com/awarding/judging-criteria/severity-categorization)
+and obviously read the contest readme which define the validity scope
+
+{Reactions}
+👍 
+
+[03/14/2025 09:53] horus1_007
+no updates about this contest????
+
+
+[03/14/2025 09:56] cloudellie
+The current status of the audit is shown on the website. We mainly post updates when awards are announced. Until then it’s difficult to predict the dates, since they depend on deep analysis of all of the submissions.
+
+
+[03/14/2025 09:57] horus1_007
+thank you for answering 
+literary no one have been answering us
+
+
+[03/14/2025 09:57] cloudellie
+Well, we get about a hundred “when???” posts a day and we’re a small team. 😊
+
+
+[03/14/2025 09:58] cloudellie
+So at a certain point we tend to be too busy to answer them all
+
+
+[03/14/2025 09:58] horus1_007
+thank you for taking the time
+
+
+[03/14/2025 09:58] horus1_007
+really appreciate it
+
+{Reactions}
+hi5 
+
+[03/14/2025 12:02] _killua69_
+Are y'all hiring for a role to answer all "when??" posts?
+
+{Reactions}
+😂 (3) 
+
+[03/14/2025 12:03] cloudellie
+I'll happily send you a magic 8 ball so you can predict the future 😄
+
+
+[03/14/2025 12:07] _killua69_
+Good idea😌
+
+
+[03/14/2025 12:34] mylifechangefast.eth_70767
+so what do you do then?
+
+
+[03/14/2025 12:36] mylifechangefast.eth_70767
+so if you have a low signal, meaning there is a high possibility of you finding getting invalid even if they are right?
+
+
+[03/14/2025 14:50] mysteryauditor
+I  think this contest involves a few bugs and will be finnished in short time. But it takse long time.
+
+
+[03/14/2025 15:55] willycode20
+Someone with SR role should help us out....
+
+
+[03/14/2025 18:43] attentioniayn
+Judge is hard at work on PJQA, be patient 🫡
+
+
+[03/14/2025 18:56] unique0x0
+
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/awaaaaaa-E9FC4.jpg
+
+{Reactions}
+🙏 (10) 
+
+[03/14/2025 18:58] attentioniayn
+Ready for my $1 🔥
+
+{Reactions}
+💀 (12) 🔥 (5) 
+
+[03/14/2025 20:52] horus1_007
+when the results came out and it's not what expected 
+the negotiations will be like that:
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/IMG_20250314_225116-F1993.jpg
+
+{Reactions}
+😂 (10) 
+
+[03/15/2025 02:04] ykuio
+How many more stages until awards announced?
+
+
+[03/15/2025 03:42] horus1_007
+in this stage awards will be announce
+
+
+[03/15/2025 06:30] willycode20
+I don't understand
+
+Result is meant to be out before awarding right??
+
+
+[03/15/2025 07:15] harry_017
+why cant we see the results
+
+
+[03/15/2025 07:51] chalabiu
+i think they will make an official announcement later today - my guess they are waiting for the right TZ
+
+{Reactions}
+🔥 (2) 
+
+[03/15/2025 10:59] saurabh_0312
+Waiting for the result
+
+
+[03/15/2025 14:22] sherlockvarm
+waiting and waiting.....
+
+
+[03/15/2025 14:24] undefined_joe
+lol.....chill Man
+Your reward is coming.
+
+
+[03/15/2025 14:27] sherlockvarm
+This is my first audit where I put 100% effort, so somewhat excited
+
+{Reactions}
+🔥 (2) 
+
+[03/15/2025 14:29] undefined_joe
+I get the feeling.
+
+{Reactions}
+✅ 
+
+[03/15/2025 14:31] mauro2857
+:10_10:
+
+
+[03/15/2025 14:46] attentioniayn
+Whatever the result, keep at it, gl 🥳
+
+{Reactions}
+🙌🏻 (3) 
+
+[03/15/2025 15:16] saurabh_0312
+How many H/m
+
+
+[03/15/2025 15:42] juanpedro_68952
+Are QA findings going to be awarded ?
+
+
+[03/15/2025 15:42] juanpedro_68952
+i can't see the results rn
+
+
+[03/15/2025 16:46] kann_p
+How are the SR's being selected for the mitigation review
+
+
+[03/15/2025 20:04] mosharaf
+Top 3 or 5 SR's from the main competition usually get selected for the later mitigation review
+
+{Reactions}
+👍 (2) 
+
+[03/16/2025 01:46] ykuio
+Can we expect the award announcement today or tomorrow?
+
+
+[03/16/2025 07:20] cd_pandora
+https://tenor.com/view/women-turn-into-monkeys-and-tap-the-computer-gif-9906216621665411571
+
+{Embed}
+https://tenor.com/view/women-turn-into-monkeys-and-tap-the-computer-gif-9906216621665411571
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/women-turn-into-monkeys-and-tap-the-comput-5E2DE.png
+
+
+[03/16/2025 08:25] benterkiii
+https://tenor.com/view/sussa-gif-5432297967573209335
+
+{Embed}
+https://tenor.com/view/sussa-gif-5432297967573209335
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/sussa-D0E3A.png
+
+
+[03/16/2025 08:33] horus1_007
+it's been nearly 3 weeks like that🤣🤣
+
+
+[03/16/2025 08:34] horus1_007
+the surprise will be payouts of 3 dollars 🤣🤣
+
+
+[03/16/2025 08:34] cd_pandora
+I thought lower Nslocs got faster judging time
+
+
+[03/16/2025 08:41] kann_p
+Guys its Sunday nobody from the staff will announce prizes. Go get drunk and enjoy Sunday idk 🤷
+
+{Reactions}
+😢 (2) 😂 (2) thankyou 
+
+[03/16/2025 11:30] willycode20
+I am not expecting much from the contest
+
+Did it dire minute
+Just curious on the findings 
+Codebase looked clean
+
+{Reactions}
+👍 (2) 👎 
+
+[03/16/2025 15:47] horus1_007
+and the next day willl be the hangover so let's hope the announce will be in Tuesday
+
+{Reactions}
+🥹 
+
+[03/16/2025 16:03] attentioniayn
+Stop giving the staff exploits to take days off pls 💀
+
+{Reactions}
+😆 
+
+[03/16/2025 21:57] horus1_007
+for just the waiting everyone should got 100 dollars
+
+{Reactions}
+chefskiss 
+
+[03/17/2025 06:06] cipermaster07
+@Samus | C4 can we expect the results today??
+
+
+[03/17/2025 07:14] benterkiii
+The world will be a better place if there were no expectations
+
+
+[03/17/2025 07:15] benterkiii
+https://tenor.com/view/cartoon-chef-cook-cooking-cute-gif-13922417652192684407
+
+{Embed}
+https://tenor.com/view/cartoon-chef-cook-cooking-cute-gif-13922417652192684407
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/cartoon-chef-F97A2.png
+
+{Reactions}
+👍 (2) 
+
+[03/17/2025 07:40] cipermaster07
+agreed🫡
+
+
+[03/17/2025 08:33] ui.ui.ui
+https://tenor.com/view/today-yay-gif-25615367
+
+{Embed}
+https://tenor.com/view/today-yay-gif-25615367
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/today-yay-B5CD4.png
+
+{Reactions}
+❤️ (2) 
+
+[03/17/2025 08:43] dot_cloud
+cant wait for my another $0.3 🫡
+
+{Reactions}
+🫡 (11) 😂 (2) 
+
+[03/17/2025 12:51] sherlockvarm
+@Samus | C4
+
+
+[03/17/2025 13:24] kartoonjoy
+It may not happen today but is expected this week.
+
+{Reactions}
+😢 (2) 👍 
+
+[03/17/2025 13:53] horus1_007
+join the club but we was saying 3$ you make it even less than that 0.3$🤣🤣
+
+{Reactions}
+😂 (3) 
+
+[03/17/2025 22:42] horus1_007
+it's come back to the judging phase
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/Screenshot_2025-03-18-00-42-20-95_40deb401-F5663.jpg
+
+{Reactions}
+😮 (3) 
+
+[03/17/2025 22:47] benterkiii
+https://tenor.com/view/look-holy-moly-omg-whoa-gif-22960590
+
+{Embed}
+https://tenor.com/view/look-holy-moly-omg-whoa-gif-22960590
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/look-holy-ACDE4.png
+
+
+[03/17/2025 22:47] teoslaf1
+https://tenor.com/view/jesse-jesse-pinkman-he-cant-keep-getting-away-with-this-breaking-bad-walter-gif-11328503629570473915
+
+{Embed}
+https://tenor.com/view/jesse-jesse-pinkman-he-cant-keep-getting-away-with-this-breaking-bad-walter-gif-11328503629570473915
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/jesse-jesse-pinkman-5327A.png
+
+{Reactions}
+😂 (3) 
+
+[03/17/2025 23:14] cloudellie
+We discovered a minor discrepancy that we just need to resolve before we can finalize awards. Sorry for the delay. I expect we'll announce tomorrow.
+
+{Reactions}
+🔥 (12) 💪 (3) 
+
+[03/18/2025 18:50] kartoonjoy
+🤑 🎉  Awards for **THORWallet**:
+
+$653.79 USDC » @shaflow2
+$549.84 USDC » @kn0t
+$549.84 USDC » @Arnie
+$549.84 USDC » @0xrochimaru
+$549.84 USDC » @web3km
+$346.49 USDC » @KupiaSec
+$346.49 USDC » @SpicyMeatball
+$346.49 USDC » @0xfalconHoof
+$346.49 USDC » @valkvalue
+$346.49 USDC » @auditism
+$346.49 USDC » @pairingfriendly
+$346.49 USDC » @0xd798b1ac
+$346.49 USDC » @Agorist
+$346.49 USDC » @undefined
+$346.49 USDC » @0xSlowbug
+$346.49 USDC » @0xAlexSR
+$346.49 USDC » @vladi319
+$346.49 USDC » @ZoA
+$346.49 USDC » @iamandreiski
+$346.49 USDC » @0xAadi
+$346.49 USDC » @jesjupyter
+$346.49 USDC » @Pelz
+$346.49 USDC » @radev_sw
+$346.49 USDC » @X-Tray
+$346.49 USDC » @zzykxx
+$346.49 USDC » @heeze
+$165.79 USDC » @Sparrow
+$110.53 USDC » @...
+$73.68 USDC » @evta
+$0.46 USDC » @jsonDoge
+$0.35 USDC » @cold
+$0.35 USDC » @Illoy Scizceneghposter
+$0.35 USDC » @UzeyirCh
+$0.35 USDC » @Benterkiii
+$0.35 USDC » @0xgh0stcybers3c
+$0.35 USDC » @msk0333
+$0.35 USDC » @Bin
+$0.35 USDC » @BZ
+$0.35 USDC » @saurabh_0312
+$0.35 USDC » @lom_ack
+$0.35 USDC » @d4ps0x
+$0.35 USDC » @silver_eth
+$0.35 USDC » @eldar_m10v
+$0.35 USDC » @Teoslaf1
+$0.35 USDC » @0x41head
+$0.35 USDC » @anchabadze
+$0.35 USDC » @jkk812812
+$0.35 USDC » @0xlucky45
+$0.35 USDC » @zraxx
+$0.35 USDC » @zhanmingjing
+$0.35 USDC » @4B
+$0.35 USDC » @peanuts
+$0.35 USDC » @agadzhalov
+$0.35 USDC » @leegh
+$0.35 USDC » @takarez
+$0.35 USDC » @0xAstronatey
+$0.35 USDC » @tpiliposian
+$0.35 USDC » @ChainSentry
+$0.35 USDC » @iceBear
+$0.35 USDC » @Mylifechangefast.eth
+$0.35 USDC » @boredpukar
+$0.35 USDC » @0xMSF14
+$0.35 USDC » @safie
+$0.35 USDC » @Daniel526
+$0.35 USDC » @0xbrett8571
+$0.35 USDC » @hjo
+$0.35 USDC » @ewwrekt
+$0.35 USDC » @dobrevaleri
+$0.35 USDC » @Granat
+$0.35 USDC » KannAudits (@!Kann | Kann Audits, @Erko)
+$0.35 USDC » @arman
+$0.35 USDC » @natachi
+$0.35 USDC » @PCProdigy
+$0.35 USDC » @sohrabhind
+$0.35 USDC » @Yaioxy
+$0.35 USDC » @w33ked
+$0.35 USDC » @jonatan
+$0.35 USDC » @Somtee
+$0.35 USDC » @REKCAH
+$0.35 USDC » Striking_Lions (@bichistriver, @Zabid, @firmanregar)
+$0.35 USDC » @saikumar279
+$0.35 USDC » @ZZhelev
+$0.35 USDC » @0xGondar
+$0.35 USDC » @DemoreX
+$0.35 USDC » @Abhan1041
+$0.35 USDC » @0xasen
+$0.18 USDC » @checks
+
+{Reactions}
+🔥 (5) 
+
+[03/18/2025 18:51] kartoonjoy
+🏁 Findings summary
+--------------------------------------—
+2 High risk findings
+1 Med risk findings
+760 wardens participated
+
+Top Gatherer(s): @Arnie, @web3km, @shaflow2, @0xrochimaru, @kn0t
+Top QA report: @Sparrow
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+⚠️ Awardees, be sure to [complete your tax reporting info](<https://docs.code4rena.com/awarding/incentive-model-and-awards/awarding-process#tax-information-for-code4rena-contributors-wardens-judges-etc>) if you haven't already. This must be completed within 30 days (i.e. before Thursday, 17 April 2025) to receive your award distribution for this audit.
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings are made public to check on your submissions.*
+
+{Reactions}
+👍 
+
+[03/18/2025 18:51] _bzee.
+Finally my 0.35
+
+{Reactions}
+🤑 (7) 
+
+[03/18/2025 18:52] chalabiu
+i am just happy that I found something - my first bug on this platform
+
+{Reactions}
+🔥 (7) 
+
+[03/18/2025 18:53] unpluggedtj
+sheesh < 0.01 
+Congrats winners!
+
+
+[03/18/2025 18:53] alekso1
+can't wait to see what I missed
+
+
+[03/18/2025 18:59] insurgence_
+brb, gotta go buy some bread with my 0.35 🤑
+
+
+[03/18/2025 19:00] teoslaf1
+best u can do is a slice
+
+
+[03/18/2025 19:00] chalabiu
+man have you seen the price of eggs in US?
+
+
+[03/18/2025 19:01] insurgence_
+Just checked, I can buy 4 of them with my paycheck
+
+{Reactions}
+😂 (3) 
+
+[03/18/2025 19:01] ykuio
+My first audit 😀  Huge thanks to the team and fellow wardens
+
+{Reactions}
+🔥 (6) 
+
+[03/18/2025 19:08] kann_p
+How from 2 high valids  i got 0.35 wtf
+
+{Reactions}
+😂 
+
+[03/18/2025 19:09] teoslaf1
+probably only one is valid?
+
+{Reactions}
+😂 
+
+[03/18/2025 19:13] insurgence_
+how long does it take for the audit report to release ?
+
+
+[03/18/2025 19:22] horus1_007
+what to do if i want to discuss my finding
+
+
+[03/18/2025 19:38] 0xarnie
+100% coverage on my first contest on c4, I’ll take it 🤝
+
+{Reactions}
+🔥 (2) 
+
+[03/18/2025 19:39] devpelz
+congratulations to the winners🎊
+
+
+[03/18/2025 19:40] bichistriver
+Congratulations everyone 
+Got my $0.35 🚀
+
+
+[03/18/2025 19:42] 0xrochimaru
+Congrats 🥂
+
+
+[03/18/2025 20:13] cryptoxz
+Thank you to all the participants 🫶
+
+{Reactions}
+❤️ (7) 
+
+[03/18/2025 20:22] ochuko_wh.
+Hi guys, is there a possibility that my submissions were not reviewed?
+
+
+[03/18/2025 20:23] ochuko_wh.
+Because I can't even find my name in the leaderboard at all
+
+
+[03/18/2025 20:24] ochuko_wh.
+I made 4 submissions 
+
+2 highs and 2 mediums, but I can't find my name in the leaderboard at all
+
+
+[03/18/2025 20:27] halalauditor
+It means they were probably invalidated
+
+
+[03/18/2025 20:30] ochuko_wh.
+Oh, wow
+
+
+[03/18/2025 20:30] ochuko_wh.
+But at least, I expected some feedback
+
+
+[03/18/2025 20:38] benterkiii
+how many valids ??
+
+
+[03/18/2025 20:38] horus1_007
+where is tge feedback or any discuss about the invalid reports???
+
+
+[03/18/2025 20:38] horus1_007
+2 high and 1 medium and that's it.
+
+
+[03/18/2025 20:38] benterkiii
+they will be visible when the report gets published
+
+
+[03/18/2025 20:38] horus1_007
+congratulations
+
+{Reactions}
+❤️ 
+
+[03/18/2025 20:39] ochuko_wh.
+My first contest here
+
+I just want to clarify 
+Are there normally feedbacks in each finding you submit?
+
+
+[03/18/2025 20:39] horus1_007
+hope finding answer about is there is any feedback or discussion about the invalid submission
+
+
+[03/18/2025 20:43] benterkiii
+huge abount of dups for this one
+
+
+[03/18/2025 20:46] granat__
+Congrats guys!
+
+
+[03/18/2025 20:47] _vnex
+Congratulations guys
+
+
+[03/18/2025 20:47] granat__
+curious to see the report and how much those 3 vulnerabilities paid
+
+
+[03/18/2025 20:56] granat__
+I have a question, there were 2 highs and 1 medium vulnerabilities in this context, how is possibile that 2 highs and 1 med paid 550$ to some people, 1 high and 1 med paid 346$, 1 high (another high) and 1 med paid 0.35$? 
+
+i think it’s mathematically wrong, or maybe it’s just mathematically wrong my mind 😂
+
+{Reactions}
+👍 
+
+[03/18/2025 20:58] cloudellie
+What you're seeing is a combination of: 
+- [Top Gatherer bonus distribution](https://docs.code4rena.com/awarding/incentive-model-and-awards#bonuses-for-top-competitors) (There was no Top Hunter this time because each finding had > 5 submissions.)
+- [C4's standard awarding algorithm](https://docs.code4rena.com/awarding/incentive-model-and-awards)
+- [Partial credit duplicates](https://docs.code4rena.com/awarding/incentive-model-and-awards#duplicates-getting-partial-credit)
+
+{Embed}
+https://docs.code4rena.com/awarding/incentive-model-and-awards
+Incentive model and awards | Code4rena
+
+
+[03/18/2025 20:58] cloudellie
+Many of the other questions here are answered in [this FAQ](https://discord.com/channels/810916927919620096/810957404887973929/1338821305180360747)
+
+
+[03/18/2025 21:01] cloudellie
+https://docs.code4rena.com/roles/wardens#tl-dr
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/image-92BB7.png
+
+
+[03/18/2025 21:02] granat__
+ok thank you
+
+{Reactions}
+hi5 (2) 
+
+[03/18/2025 21:06] teoslaf1
+That means not even what is public on code4arena, like ranking and that the code base has a bug?
+
+
+[03/18/2025 21:08] cloudellie
+It's fine to discuss information that is in the award announcement or on the website. I was replying to the warden who asked what the findings were.
+
+{Reactions}
+❤️ (2) 
+
+[03/18/2025 23:22] bro_are_u_ok
+there is no issue in _validateTransfer() function？submit a high，i remember the function use && logic which is wrong😥
+
+
+[03/19/2025 00:04] lanyi2024_15115
+why delete me？
+
+
+[03/19/2025 00:04] kartoonjoy
+I would NEVER delete you!
+
+
+[03/19/2025 00:04] kartoonjoy
+Now what's your question?
+
+
+[03/19/2025 00:05] lanyi2024_15115
+I was among my previous winners. Why not now
+
+
+[03/19/2025 00:06] lanyi2024_15115
+What has changed
+
+
+[03/19/2025 00:06] kartoonjoy
+I deleted the line items that displayed $0.
+
+{Reactions}
+😂 (4) 
+
+[03/19/2025 00:07] lanyi2024_15115
+ok
+
+
+[03/19/2025 00:07] lanyi2024_15115
+It’s really sad
+
+
+[03/19/2025 00:08] lanyi2024_15115
+😭
+
+{Reactions}
+empathy 😂 
+
+[03/19/2025 00:10] kartoonjoy
+It's ok. Really.
+
+
+[03/19/2025 01:46] mosharaf
+@CloudEllie When the submission repo will be public ?
+
+
+[03/19/2025 02:18] mysteryauditor
+I have submitted the issue on _credit() function and think it is valid. But it was invalidated. Could anyone let me know the valid issues?
+
+
+[03/19/2025 02:18] mysteryauditor
+It takes so long to see the report of contest.
+
+
+[03/19/2025 02:19] mysteryauditor
+Should I wait until the report complete?
+
+
+[03/19/2025 03:43] saurabh_0312
+i didnt understand the reward distributuion
+
+
+[03/19/2025 04:00] _bzee.
+lol
+
+
+[03/19/2025 04:02] dot_cloud
+thats why I got tag notification but cant find my name on it kekw
+
+
+[03/19/2025 04:04] illoy_sci
+It seems like the medium finding got duped to non existence (0$) and one of the high finding duped so much that it's 0.35$ as well 🤣
+
+{Reactions}
+😂 
+
+[03/19/2025 04:04] illoy_sci
+Then one of the high finding was duped a bit and split among the top 25 ~  worth 346$
+
+{Reactions}
+😂 
+
+[03/19/2025 04:05] illoy_sci
+finally the people above 346$ are due to gatherer and hunter bonus + selected for report
+
+
+[03/19/2025 04:05] illoy_sci
+This would be my way of making sense of the reward distribution, not sure if it's 100% correct but sure hope it helps
+
+
+[03/19/2025 04:08] daniel526
+Hello @CloudEllie does this result lead to an immediate effect on signal score? cc: @thebrittfactor | C4
+
+
+[03/19/2025 07:32] mylifechangefast.eth_70767
+Can't even remember the reports I submitted
+
+{Reactions}
+😂 (4) 
+
+[03/19/2025 12:51] _bzee.
+So 2 med == 0.35🤔
+
+
+[03/19/2025 21:06] benterkiii
+1 high and 1 med == 0.35
+I was pretty surprised
+
+
+[03/19/2025 22:14] dharkartz_24419
+I think making the judging transparent to all will reduce these questions
+
+{Reactions}
+👍 
+
+[03/20/2025 10:29] aarif02
+It's because of the number of duplicates. 
+
+The > the dups, the lesser the amount.
+
+{Reactions}
+👍 (2) 👆 (3) 
+
+[03/20/2025 15:53] benterkiii
+Yes apparently
+
+
+[03/20/2025 16:49] dot_cloud
+here is the formula. this is for you sybil farmer whoever you are
+
+{Attachments}
+Code4rena - ARCHIVE-PUBLIC - thorwallet-feb [1341392662263107615].txt_Files/image-82763.png
+
+
+[03/20/2025 18:18] w33ked_
+Dude always talking about sybil farming...Seems like it's working well for you
+
+
+[03/20/2025 18:23] dot_cloud
+I dont think I follow what u said?
+
+
+[03/24/2025 19:55] ykuio
+So it looks I missed a high... I wonder what it was?
+
+{Reactions}
+😂 
+
+[03/24/2025 21:24] mylifechangefast.eth_70767
+Has it ended?
+
+
+[03/24/2025 22:45] ykuio
+I can see in the website that I missed a high
+
+
+[03/24/2025 22:46] ykuio
+Weird because I reported two highs
+
+
+[04/14/2025 13:35] elser17
+@CloudEllie in my profile I see that I have a non-public finding from this contest, yet I cannot find myself in the list, could you check and clarify please?
+
+
+[04/14/2025 13:39] kartoonjoy
+Hi there. There's likely not an issue, this one had a finding that was duped quite significantly so the award was zero'd out. Those names weren't added to the awards listing since no money was being paid.
+
+FYI.....The report will be out later today / tomorrow.
+
+{Reactions}
+👍 
+
+[04/16/2025 08:25] elser17
+Correct me if I am wrong: Issue in H-1 is that more TGT tokens than expected (579_000_000) could be deposited into the contract, so users claiming last will get less TITN tokens than they should?
+
+
+[04/16/2025 20:02] C4
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted 04/25/2025 18:24. Please make sure to grab anything you might need before then.
+
+
+[04/24/2025 20:02] C4
+ℹ️ Reminder: this channel will be deleted after 24 hours.
+
+
+==============================================================
+Exported 350 message(s)
+==============================================================
